@@ -41,29 +41,53 @@ p {
 header {
   width: 100%;
   height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+  padding-top: 1.9rem;
+  z-index: 1500;
 }
 header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transform: translateX(-130%);
 }
 header nav .nav-list {
   display: flex;
   list-style: none;
 }
-header nav .nav-list .nav-item {
+header nav .nav-list .nav-item a {
   color: #fff;
-  font-size: 1.6rem;
-  padding: 0 2rem;
+  font-size: 1.5rem;
+  padding: 0 1.7rem;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  transition: 0.4s;
+}
+header nav .nav-list .nav-item a:hover {
+  color: #c59d5f;
 }
 header nav .menu-toggle {
   position: absolute;
   right: 2.5rem;
   color: #fff;
   font-size: 2rem;
-  display: none;
+}
+
+.active {
+  position: relative;
+}
+.active:before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  background-color: #fff;
+  left: 17px;
+  bottom: -3px;
 }
 
 /* Hero */
@@ -78,7 +102,7 @@ header nav .menu-toggle {
   height: 100vh;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 }
 .hero .container .sub-headline {
   font-size: 8.8rem;
@@ -86,6 +110,16 @@ header nav .menu-toggle {
   font-weight: 100;
   line-height: 0.4;
   letter-spacing: 2px;
+}
+
+/* Media Query */
+@media (min-width: 900px) {
+  header .nav {
+    transform: translateX(0);
+  }
+  header .nav .menu-toggle {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

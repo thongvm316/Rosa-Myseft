@@ -4,11 +4,6 @@
 
 @import url(../css/fonts.css);
 
-// @font-face {
-//     font-family: 'Herr Von Muellerhoff';
-//     src: url('../fonts/Herr_Von_Muellerhoff/HerrVonMuellerhoff-Regular.ttf');
-// }
-
 /* Font */
 $main-font: 'Source Sans Pro', sans-serif;
 $secondary-font: 'Herr Von Muellerhoff', cursive;
@@ -53,22 +48,33 @@ p {
 header {
     width: 100%;
     height: auto;
-    // position: absolute;
-    // top: 0;
-    // left: 0;
+    position: absolute; // chỉnh lại vitri khi có Hero section
+    top: 0;
+    left: 0;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+    padding-top: 1.9rem;
+    z-index: 1500;
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        transform: translateX(-130%);           
         .nav-list {
             display: flex;
-            list-style: none;           
+            list-style: none;
             .nav-item {
-                color: #fff;
-                font-size: 1.6rem;
-                padding: 0 2rem;
-                text-transform: uppercase;
+                a {
+                    color: #fff;
+                    font-size: 1.5rem;
+                    padding: 0 1.7rem;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    position: relative;
+                    transition: .4s;
+                    &:hover {
+                        color: $secondary-font-color;
+                    }
+                }
             }
         }
         .menu-toggle {
@@ -76,8 +82,20 @@ header {
             right: 2.5rem;
             color: #fff;
             font-size: 2rem;
-            display: none;
         }
+    }
+}
+
+.active {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 60%;
+        height: 2px;
+        background-color: #fff;
+        left: 17px;
+        bottom: -3px;
     }
 }
 
@@ -92,13 +110,26 @@ header {
         height: 100vh;
         flex-direction: column;
         justify-content: center;
-        text-align: center;
+        // text-align: center; cai nao cung dc
+        align-items: center;
         .sub-headline {
             font-size: 8.8rem;
             font-family: $secondary-font;
             font-weight: 100;
             line-height: .4;
             letter-spacing: 2px;
+        }
+    }
+}
+
+/* Media Query */
+@media (min-width: 900px) {
+    header {
+        .nav {
+            transform: translateX(0);
+            .menu-toggle {
+                display: none;
+            }
         }
     }
 }
