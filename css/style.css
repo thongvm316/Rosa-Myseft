@@ -37,6 +37,10 @@ p {
   padding: 0 2.4rem;
 }
 
+section {
+  padding: 7.9rem;
+}
+
 /* Header */
 header {
   width: 100%;
@@ -118,6 +122,7 @@ header nav .menu-toggle .fa-times {
   background-size: cover;
   width: 100%;
   height: 100vh;
+  text-align: center;
 }
 .hero .container {
   display: flex;
@@ -140,7 +145,16 @@ header nav .menu-toggle .fa-times {
   text-transform: uppercase;
 }
 
-.separator .line-right:before, .separator .line-left:before {
+.headline {
+  color: #fff;
+  font-size: 3.7rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+}
+
+.headline-description .separator .line-right:before, .headline-description .separator .line-left:before {
   content: "";
   position: absolute;
   top: 50%;
@@ -148,39 +162,54 @@ header nav .menu-toggle .fa-times {
   border: 0.6rem solid transparent;
 }
 
-.separator {
+.headline-description .separator {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.separator .line {
+.headline-description .separator .line {
   width: 85px;
   max-width: 8.4rem;
   height: 0.25rem;
   background-color: #fff;
   position: relative;
 }
-.separator .line-left:before {
+.headline-description .separator .line-left:before {
   border-left-color: #fff;
   left: 0;
 }
-.separator .line-right:before {
+.headline-description .separator .line-right:before {
   border-right-color: #fff;
   right: 0;
 }
-.separator .asterisk {
+.headline-description .separator .asterisk {
   font-size: 1.2rem;
   color: #c59d5f;
   padding: 0 1.6rem;
 }
 
-.headline {
+.single-animation h5 {
   color: #fff;
-  font-size: 3.7rem;
+  font-size: 1.4rem;
+  font-weight: 100;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 900;
+  margin-bottom: 1.2rem;
+  letter-spacing: 3px;
+}
+.single-animation .btn-cta {
+  display: inline-block;
+  font-size: 1.1rem;
+  background-color: #fff;
+  padding: 1rem 1.8rem;
+  border-radius: 0.4rem;
+  color: #515151;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transition: background-color 0.5s;
+}
+.single-animation .btn-cta:hover {
+  background-color: #c59d5f;
+  color: #fff;
 }
 
 /* Media Query */
@@ -196,6 +225,52 @@ header nav .menu-toggle .fa-times {
   }
   header nav .menu-toggle {
     display: none;
+  }
+
+  .discover-our-story .restaurant-info {
+    display: flex;
+    align-items: center;
+    text-align: center;
+  }
+  .discover-our-story .restaurant-info > div {
+    flex: 1;
+  }
+  .discover-our-story .restaurant-info .restaurant-description {
+    padding-right: 7rem;
+  }
+  .discover-our-story .restaurant-info .restaurant-description .global-headline .headline {
+    color: #252525;
+  }
+  .discover-our-story .restaurant-info .restaurant-description .global-headline .asterisk {
+    margin: 2.4rem 0;
+  }
+  .discover-our-story .restaurant-info .restaurant-description p {
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+  }
+  .discover-our-story .restaurant-info .restaurant-description .body-cta {
+    font-size: 1.5rem;
+    color: #c59d5f;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+    position: relative;
+  }
+  .discover-our-story .restaurant-info .restaurant-description .body-cta:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    background-color: #c59d5f;
+    width: 100%;
+    height: 2px;
+  }
+  .discover-our-story .restaurant-info .restaurant-description .body-cta:hover {
+    color: #515151;
+  }
+
+  .body-cta:hover:after {
+    color: #515151;
   }
 }
 
