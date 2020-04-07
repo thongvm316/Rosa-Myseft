@@ -133,16 +133,9 @@ header {
     background-size: cover;
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: center;
     text-align: center;
-    .container {
-        display: flex;
-        height: 100vh;
-        flex-direction: column;
-        justify-content: center;
-        // text-align: center; cai nao cung dc
-        align-items: center;
-        
-    }
 }
 
 .sub-headline {
@@ -237,11 +230,48 @@ header {
     }
 }
 
+/* Tasteful */
+.between {
+    background: url('../img/tasteful-recipes.jpg') center no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 65vh;
+    display: flex;
+    text-align: center;
+}
 
+/* Discover Our Menu */
+.restaurant-info {
+    .image-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem
+    }
+}
 
+.restaurant-description {
+    margin-top: 7.9rem;
+    text-align: center;
+    .headline {
+        color: $main-font-color-dark;
+    }
+    p {
+        margin-bottom: 2.4rem;
+    }
+}
 
+/* The perfect blend */
+.perfect-blend {
+    background: url('../img/perfect-blend.jpg');
+}
 
-
+/* Culinary Delight  */
+.culinary-delight {
+    .restaurant-description {
+        margin-top: 0;
+        margin-bottom: 3.9rem;
+    }
+}
 
 /* Media Query */
 @media (min-width: 900px) {
@@ -285,32 +315,27 @@ header {
                     line-height: 1.6;
                     margin-bottom: 2.4rem;
                 }
-                .body-cta {
-                    font-size: 1.5rem;
-                    color: $secondary-font-color;
-                    text-transform: uppercase;
-                    letter-spacing: 2px;
-                    transition: color .5s;
-                    position: relative;
-                    &:after {
-                        content: '';
-                        position: absolute;
-                        bottom: -3px;
-                        left: 0;
-                        background-color: $secondary-font-color;
-                        width: 100%;
-                        height: 2px;
-                    }
-                    &:hover {
-                        color: $body-font-color;
-                    }
-                }
-               
             }
-          
         }
     }
-    .body-cta:hover:after {
-        color: $body-font-color;
+    .body-cta {
+        font-size: 1.5rem;
+        color: $secondary-font-color;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: color .5s;
+        position: relative;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            background-color: $secondary-font-color;
+            width: 100%;
+            height: 2px;
+        }
+        &:hover {
+            color: $body-font-color;
+        }
     }
 }

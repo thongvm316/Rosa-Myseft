@@ -122,14 +122,9 @@ header nav .menu-toggle .fa-times {
   background-size: cover;
   width: 100%;
   height: 100vh;
-  text-align: center;
-}
-.hero .container {
   display: flex;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .sub-headline {
@@ -212,6 +207,45 @@ header nav .menu-toggle .fa-times {
   color: #fff;
 }
 
+/* Tasteful */
+.between {
+  background: url("../img/tasteful-recipes.jpg") center no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 65vh;
+  display: flex;
+  text-align: center;
+}
+
+/* Discover Our Menu */
+.restaurant-info .image-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.restaurant-description {
+  margin-top: 7.9rem;
+  text-align: center;
+}
+.restaurant-description .headline {
+  color: #252525;
+}
+.restaurant-description p {
+  margin-bottom: 2.4rem;
+}
+
+/* The perfect blend */
+.perfect-blend {
+  background: url("../img/perfect-blend.jpg");
+}
+
+/* Culinary Delight  */
+.culinary-delight .restaurant-description {
+  margin-top: 0;
+  margin-bottom: 3.9rem;
+}
+
 /* Media Query */
 @media (min-width: 900px) {
   header nav .nav-list {
@@ -248,7 +282,8 @@ header nav .menu-toggle .fa-times {
     line-height: 1.6;
     margin-bottom: 2.4rem;
   }
-  .discover-our-story .restaurant-info .restaurant-description .body-cta {
+
+  .body-cta {
     font-size: 1.5rem;
     color: #c59d5f;
     text-transform: uppercase;
@@ -256,7 +291,7 @@ header nav .menu-toggle .fa-times {
     transition: color 0.5s;
     position: relative;
   }
-  .discover-our-story .restaurant-info .restaurant-description .body-cta:after {
+  .body-cta:after {
     content: "";
     position: absolute;
     bottom: -3px;
@@ -265,11 +300,7 @@ header nav .menu-toggle .fa-times {
     width: 100%;
     height: 2px;
   }
-  .discover-our-story .restaurant-info .restaurant-description .body-cta:hover {
-    color: #515151;
-  }
-
-  .body-cta:hover:after {
+  .body-cta:hover {
     color: #515151;
   }
 }
