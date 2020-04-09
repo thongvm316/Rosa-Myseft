@@ -262,7 +262,8 @@ header {
 
 /* The perfect blend */
 .perfect-blend {
-    background: url('../img/perfect-blend.jpg');
+    background: url('../img/perfect-blend.jpg') no-repeat center;
+    background-size: cover;
 }
 
 /* Culinary Delight  */
@@ -270,6 +271,108 @@ header {
     .restaurant-description {
         margin-top: 0;
         margin-bottom: 3.9rem;
+    }
+
+    .asterisk {
+        font-size: 1.2rem;
+        margin: 2.4rem 0;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #121212;
+    padding: 7.9rem !important;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    h4 {
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 3rem;
+        font-weight: 100;
+    }
+    .back-to-top {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+        position: absolute;
+        top: -2.5rem;
+        right: 50%;
+        transform: translateX(50%);
+        background-color: $main-font-color-dark;
+        a {
+            i {
+                color: #fff;
+                font-size: 2rem;
+                display: inline-block;
+                padding: 2rem;
+            }
+        }
+    }
+    .footer-content-about {
+        max-width: 51rem;
+        margin: 0 auto 5.4rem;
+        .asterisk {
+            font-size: 1.2rem;
+            color: $secondary-font-color;
+            margin: 2.4rem 0;
+        }
+        p {
+            line-height: 2;
+        }
+    }
+    .footer-content-divider {
+        display: flex;
+        justify-content: space-around;
+        .social-media {
+            h4 {
+                font-size: 1.9rem;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-weight: 100;
+                margin-bottom: 3rem;
+            }
+            .social-icon {
+                list-style: none;
+                display: flex;
+                li a i {
+                    color: #fff;
+                    opacity: 0.5;
+                    padding: 0.8rem 2rem;
+                    font-size: 2rem;
+                }
+            }
+        }
+        .newsletter-container {
+            max-width: 27.3rem;
+            width: 100%;
+            .newsletter-form{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                .newsletter-input {
+                    max-width: 25rem;
+                    width: 100%;
+                    padding: 1rem;
+                    border-radius: .4rem;
+                }
+                .newsletter-btn {
+                    position: absolute;
+                    top: 0;
+                    left: 80%;
+                    transform: translateY(50%);
+                    background-color: transparent;
+                    padding: 1px 1.6rem;
+                    font-size: 1.6rem;
+                    color: $main-font-color-dark;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
 
@@ -339,3 +442,4 @@ header {
         }
     }
 }
+
