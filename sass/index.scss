@@ -140,6 +140,23 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
+
+    .animate-fadeUp {
+        animation: fadeUp .5s forwards;
+        animation-delay: .5s;
+        opacity: 0;
+    }
+
+    .animate-scale {
+        opacity: 0;
+        animation: scale .5s forwards;
+    }
+
+    .animate-grow {
+        opacity: 0;
+        animation: grow 2s forwards;
+        animation-delay: .9s;
+    }
 }
 
 .sub-headline {
@@ -154,6 +171,8 @@ header {
         text-transform: uppercase;
     }
 }
+
+
 
 .headline {
     color: #fff;
@@ -203,11 +222,17 @@ header {
             font-size: 1.2rem;
             color: $secondary-font-color;
             padding: 0 1.6rem;
+            opacity: 0;
+            animation: spin .5s forwards;
+            animation-delay: .9s;
          }
     }
 }
 
 .single-animation {
+    animation: fadeDown .5s forwards;
+    animation-delay: 1.5s;
+    opacity: 0;
     h5 {
         color: #fff;
         font-size: 1.4rem;
@@ -242,15 +267,6 @@ header {
     letter-spacing: 2px;
     transition: color .5s;
     position: relative;
-    // &:after {
-    //     content: '';
-    //     position: absolute;
-    //     bottom: -3px;
-    //     left: 0;
-    //     background-color: $secondary-font-color;
-    //     width: 100%;
-    //     height: 2px;
-    // }
     &:hover {
         color: $body-font-color;
     }
@@ -283,6 +299,10 @@ header {
     }
     p {
         margin-bottom: 2.4rem;
+    }
+    .asterisk {
+        font-size: 1.2rem;
+        margin: 2.4rem 0;
     }
 }
 
@@ -403,132 +423,5 @@ footer {
     }
 }
 
-/* Media Query */
-@media (min-width: 900px) {
-    *{}
-    header {
-        nav {
-            .nav-list {
-                transform: translateX(0);
-                position: initial; // static, hien dung vi tri theo nav style
-                width: auto;
-                height: auto;
-                justify-content: space-between;
-                flex-direction: row;
-                background-color: transparent;
-            }
-            .menu-toggle {
-                display: none;
-            }
-        }
-    }
-    
-    .discover-our-story {
-        .restaurant-info {
-            display: flex;
-            align-items: center;
-            text-align: center;
-            > div {
-                flex: 1;
-            }
-            .restaurant-description {
-                padding-right: 7rem;
-                .global-headline {
-                    .headline {
-                        color: $main-font-color-dark;
-                    }
-                    .asterisk {
-                        margin: 2.4rem 0;
-                    }
-                }
-                p {
-                    line-height: 1.6;
-                    margin-bottom: 2.4rem;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 768px){ 
-    .discover-our-story {
-        .restaurant-description {
-            margin-top: 0;
-            .body-cta {
-                display: inline-block;
-                margin-bottom: 2rem;
-            }
-            .asterisk {
-                margin: 2.4rem 0;
-            }
-        }
-        .global-headline {
-            margin-top: 3.9rem;
-        }
-    }
-    
-    .discover-our-menu {
-        .restaurant-description {
-            margin-top: 7.9rem;
-            .asterisk {
-                margin: 2.4rem 0;
-            }
-        }
-    }
-
-    .headline {
-        font-size: 3rem;
-    }
-
-    .sub-headline {
-        font-size: 8rem;
-    }
-
-    section {
-        padding: 3.9rem 0;
-    }
-
-    .culinary-delight {
-        .global-headline {
-            margin-top: 3.9rem;
-        }
-    }
-}
-
-@media (max-width: 568px) {
-    footer {
-        padding: 3.9rem 0 !important;
-        .footer-content {
-            margin-top: 1rem;
-        }
-        .social-icon {
-            li a i {
-                font-size: 1.5rem !important;
-                padding: 0.5rem 1.2rem !important;
-            }
-        }
-        .social-media, .newsletter-container {
-            h4 {
-                margin-bottom: 1.5rem !important;
-                font-size: 1.5rem !important;
-            }
-        }
-
-        .newsletter-container {
-           width: 45% !important;
-           .newsletter-input {
-               padding: .4rem !important;
-           }
-           ::placeholder {
-            font-size: 1rem;
-            }
-            .newsletter-btn {
-                margin-left: 7rem !important;
-                transform: translateY(25%) !important;
-            }
-        }
-        
-    }
-}
-
-
+@import 'Animation';
+@import 'MediaQuery';
