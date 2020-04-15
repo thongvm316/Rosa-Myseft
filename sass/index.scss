@@ -25,11 +25,9 @@ html, body {
     overflow-x: hidden;
 }
 
-body { overflow-x: hidden; } 
-
 img {
     width: 100%;
-    max-width: 100%; // Why
+    max-width: 100%; 
 }
 
 a {
@@ -41,7 +39,7 @@ p {
     line-height: 1.6;
 }
 
-.container {  // tim hieu them
+.container { 
     width: 100%;
     max-width: 122.5rem;
     margin: auto;
@@ -140,7 +138,7 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
-
+    
     .animate-fadeUp {
         animation: fadeUp .5s forwards;
         animation-delay: .5s;
