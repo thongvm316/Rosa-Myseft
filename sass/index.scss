@@ -54,7 +54,7 @@ section {
 header {
     width: 100%;
     height: auto;
-    position: absolute; // chỉnh lại vitri khi có Hero section
+    position: absolute; // chỉnh lại vitri khi có Hero section, căn theo trình duyệt
     top: 0;
     left: 0;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
@@ -72,7 +72,7 @@ header {
             height: 100vh;
             background-color: $main-font-color-dark;
             align-items: center;
-            position: absolute;
+            position: absolute; // ko co cha realtive, can theo bw
             top: 0;
             left: 0;
             list-style: none;
@@ -136,7 +136,6 @@ header {
     width: 100%;
     height: 100vh;
     display: flex;
-    align-items: center;
     text-align: center;
     
     .animate-fadeUp {
@@ -275,8 +274,9 @@ header {
     background: url('../img/tasteful-recipes.jpg') center no-repeat;
     background-size: cover;
     width: 100%;
-    min-height: 65vh;
+    height: 65vh;
     display: flex;
+    align-items: center;
     text-align: center;
 }
 

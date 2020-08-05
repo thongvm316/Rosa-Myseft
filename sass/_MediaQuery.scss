@@ -25,7 +25,7 @@
             align-items: center;
             text-align: center;
             > div {
-                flex: 1;
+                flex: 1; // Binh thuong, khi display: flex, flex-direction: row -> cac div dan ngang, chieu dai moi div tuy vao content cua no -> nhung khi su dung flex: 1, cac div co chieu dai bang nhau ko quan tam content
             }
             .restaurant-description {
                 padding-right: 7rem;
